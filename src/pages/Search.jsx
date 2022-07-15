@@ -21,7 +21,7 @@ export function Search() {
 
   const [characters, setCharacters] = useState([]);
 
-  const url = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${time}&apikey=${publicKey}&hash=${hash}`;
+  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${time}&apikey=${publicKey}&hash=${hash}`;
 
   useEffect(() => {
     axios

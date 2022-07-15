@@ -11,7 +11,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const baseURL = `http://gateway.marvel.com/v1/public/characters/`;
+const baseURL = `https://gateway.marvel.com/v1/public/characters/`;
 const publicKey = "1aa0ca677f0124d04d5cdd906772e59f";
 const privateKey = "d19aeaa1df43a23298c2686c80946e10a93aac1a";
 const time = Number(new Date());
