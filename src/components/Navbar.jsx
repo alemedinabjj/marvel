@@ -3,7 +3,7 @@ import { SearchBar } from './SearchBar'
 
 export function Navbar() {
   return (
-    <nav className='w-full h-fit p-5 bg-red-900 text-white'>
+    <nav className='w-full  text-white'>
       <ul className='flex gap-3 text-sm'>
         <NavLink
           to="/"
@@ -17,7 +17,6 @@ export function Navbar() {
           Contact
         </NavLink>
       </ul>
-      <SearchBar />
     </nav>
   )
 }

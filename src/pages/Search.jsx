@@ -50,7 +50,7 @@ export function Search() {
             characters.length === 0 ? (<h1>Character not found</h1>) :
           characters.map((character) => {
             return (
-              <Card sx={{ maxWidth: 345, m: 2 }} key={character?.id} >
+              <Card sx={{ maxWidth: 245, width:240, m: 2, height: 350, maxHeight: 350 }} key={character?.id} >
                 <CardActionArea>
                   <CardMedia
                     component="img"

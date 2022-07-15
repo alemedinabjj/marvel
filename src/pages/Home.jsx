@@ -65,7 +65,8 @@ export function Home() {
           ) : (
             characters.map((character) => {
               return (
-                <Card sx={{ maxWidth: 345, m: 2 }} key={character.id}>
+                <Link to={`/characters/${character.id}`}>
+                <Card sx={{ maxWidth: 245, width:240, m: 2, height: 350, maxHeight: 350 }} key={character.id}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -87,14 +88,10 @@ export function Home() {
                       ></Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Link to={`/characters/${character.id}`}>
-                      <Button size="small" color="primary">
-                        Details
-                      </Button>
-                    </Link>
+                  <CardActions className="flex self-end">
                   </CardActions>
                 </Card>
+                </Link>
               );
             })
           )}
