@@ -19,6 +19,12 @@ export function SearchBar() {
     navigate(`/search?q=${search}`)
   }
 
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      onButtonClickHandler(search)
+    }
+  })
+
   return (
     <div className='flex items-center justify-center gap-5 sm:gap-5 m-2'>
       <h1 className="text-xl text-white drop-shadow-2xl drop-s bold" >Marvel Char</h1>
