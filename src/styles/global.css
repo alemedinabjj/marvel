@@ -15,3 +15,7 @@ body {
 img {
   max-height: 250px
 }
+
+main {
+  padding-top: 10rem;
+}
