@@ -37,50 +37,58 @@ export function Search() {
 
   return (
     <main>
-      <section>
-        <h1 className="text-3xl text-center p-5">Resultados para: <span className="text-blue-500">{query}</span> </h1>
+      <section className="min-h-screen">
+        <h1 className="text-3xl text-center p-5">
+          Resultados para: <span className="text-blue-500">{query}</span>{" "}
+        </h1>
         <Grid
           sx={{ flexGrow: 1 }}
           container
           spacing={1}
           className="flex justify-center"
         >
-          {
-          
-            characters.length === 0 ? (<h1>Character not found</h1>) :
-          characters.map((character) => {
-            return (
-              <Card sx={{ maxWidth: 245, width:240, m: 2, height: 350, maxHeight: 350 }} key={character?.id} >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={
-                      character.thumbnail.path +
-                      "." +
-                      character.thumbnail.extension
-                    }
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {character.name}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                    ></Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link to={`/characters/${character.id}`}>
-                    <Button size="small" color="primary">
-                      Details
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            );
-          })}
+          {characters.length === 0 ? (
+            <h1>Character not found</h1>
+          ) : (
+            characters.map((character) => {
+              return (
+                <Link to={`/characters/${character.id}`}>
+                  <Card
+                    sx={{
+                      maxWidth: 245,
+                      width: 240,
+                      m: 2,
+                      height: 350,
+                      maxHeight: 350,
+                    }}
+                    key={character?.id}
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={
+                          character.thumbnail.path +
+                          "." +
+                          character.thumbnail.extension
+                        }
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          {character.name}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                        ></Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions></CardActions>
+                  </Card>
+                </Link>
+              );
+            })
+          )}
         </Grid>
       </section>
     </main>

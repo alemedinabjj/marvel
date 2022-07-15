@@ -40,7 +40,7 @@ export function Characters() {
 
   return (
     <main>
-      <section className="flex items-center justify-center flex-col">
+      <section className="flex items-center justify-center flex-col min-h-screen">
         <h1 className="text-3xl p-5">Detalhes: {character?.name}</h1>
         <Grid
           sx={{ flexGrow: 1 }}

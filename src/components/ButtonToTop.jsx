@@ -26,7 +26,7 @@ export function ButtonToTop() {
     <div>
       {
         showTopBtn && (
-        <button className="fixed bottom-0 right-0 m-2 p-2 bg-red-700 text-white rounded-full shadow-2xl transition hover:shadow-2xl hover:bg-red-800 w-10 h-10 animate-bounce" onClick={toTop}>
+        <button className="fixed bottom-0 right-0 m-2 p-2 bg-red-700 text-white rounded-full shadow-2xl border-2 border-white text-center transition hover:shadow-2xl hover:bg-red-800 w-10 h-10 animate-bounce" onClick={toTop}>
           ↑
         </button>
         ) 

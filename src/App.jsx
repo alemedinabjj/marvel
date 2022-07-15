@@ -6,6 +6,7 @@ import { Contact } from './pages/Contact'
 import { Home } from './pages/Home'
 import { Search } from './pages/Search'
 import { ButtonToTop } from './components/ButtonToTop'
+import { Footer } from './components/Footer'
 import './styles/global.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/search" element={<Search />} />
     </Routes>
     <ButtonToTop />
+    <Footer />
     </BrowserRouter>
   )
 }
